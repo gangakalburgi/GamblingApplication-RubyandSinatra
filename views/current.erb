@@ -1,0 +1,24 @@
+
+<aside>
+  <% if session[:message] %>
+ <h3><%= session[:message] %>
+ <% session[:message] = nil%>
+ <% end %></h3>
+		
+    <form position= fixed bottom= 0 action="/bet" method='post'>
+  <h4>Total win</h4>
+  <input type='Integer' name='currentwin' value = <%= session[:currentwin] %> ></input>
+     		 <br>
+     		 <br>
+     		 <br>
+         <h4>Total Loss</h4>
+      		 <input type='Integer' name='currentloss' value = <%= session[:currentloss] %>></input>
+      		 <br>
+     		 <br>
+     		 <br>
+             <h4>Total Profit</h4>
+             <input type='Integer' name='currentprofit' value = <%= session[:currentprofit] %>></input>
+      
+		</form>
+	</aside>
+ 

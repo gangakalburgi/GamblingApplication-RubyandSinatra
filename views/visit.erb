@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link href="style1.css" rel="stylesheet" type="text/css">
+      </head>
+<body>
+
+	
+ 	 	<h3 align="center">Welcome to Gamble site, <%= session[:username] %></h3>
+	
+	
+	<h3 align="center">place your bet on dice number(1 to 6)</h3>
+<br>
+	<div>
+		<%= erb :current %>
+	<form action="/bet" method='post'>
+      bet money:<input type='text' name='betmoney' placeholder="Bet Amount"></input>
+      <br>
+      on &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :<input type='Integer' name='number' placeholder="Number"></input>
+      <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <input type='submit' name='bet'></input>
+	</form>
+	</div>
+	<br>
+	<br>
+		<%= erb :account %>
+	
+
+<div id="footer">  
+               <h2> <a href="/logout">Log-Out</a></h2>
+ </div>
+
+
+
+</body>
+</html>

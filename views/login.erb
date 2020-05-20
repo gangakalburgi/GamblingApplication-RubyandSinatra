@@ -1,0 +1,18 @@
+<html>
+ <head>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+      
+ </head>
+ <body>
+<% if session[:message] %>
+ <h3><%= session[:message] %>
+ <% session[:message] = nil%>
+ <% end %>
+
+ 	
+ <h1>Please logon</h1>
+ <%= erb :form %>
+
+ </body>
+ </html>
